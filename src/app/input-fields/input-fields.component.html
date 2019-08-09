@@ -1,0 +1,13 @@
+<p>input-fields works!</p>
+<form  #myForm="ngForm" (ngSubmit)="onSubmit()">
+    Name <input [(ngModel)]="name" name="nameInput" type="text"><br>
+    Age <input [(ngModel)]="age" name="ageInput" type="number"><br>
+    Description<textarea [(ngModel)]="description" name="descriptionInput"></textarea>
+    <br>
+    <button type="submit" (ngSubmit)="onSubmit()">Submit</button>
+</form>
+
+<!-- Készítünk egy formot, amint elnevezünk myFormnak
+Teszünk rá egy ngSubmit-t, ami az onSubmit metódust hívja ts oldalról
+Készítünk 3 input mezőt, amelyeknek az értékét ngModellel bekötjük
+Végül egy gomb, ami elindítja az egész lavinát. Rákötjük az ngSubmitot és a metódusunkat.-->
